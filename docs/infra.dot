@@ -1,0 +1,26 @@
+digraph INFRA {
+  node [ color = "black", fillcolor = "#E6E6E6", height =1, style = "filled,bold,rounded", fontname = "Arial" ];
+  "BankDbContext" [ label = "BankDbContext
+(Microsoft.EntityFrameworkCore.DbContext)", shape =cylinder, fillcolor = "#FFCFB3" ];
+  "BankAccountRepository" [ label = "BankAccountRepository
+(BFB.DataAccess.MSSQL.BankAccountRepository)", shape =cylinder, fillcolor = "#FFCFB3" ];
+  "BankMongoDbContext" [ label = "BankMongoDbContext
+(BFB.DataAccess.Mongo.BankMongoDbContext)", shape =cylinder, fillcolor = "#FFCFB3" ];
+  "BankBranchRepository" [ label = "BankBranchRepository
+(BFB.DataAccess.Mongo.BankBranchRepository)", shape =cylinder, fillcolor = "#FFCFB3" ];
+  "BankDB2Context" [ label = "BankDB2Context
+(BFB.DataAccess.DB2.BankDB2Context)", shape =cylinder, fillcolor = "#FFCFB3" ];
+  "MongoDB" [ label = "MongoDB
+(MongoDB)", shape =cylinder, fillcolor = "#FFCFB3" ];
+  "DB2" [ label = "DB2
+(IBM DB2)", shape =cylinder, fillcolor = "#FFCFB3" ];
+  "RetryPolicyService" [ label = "RetryPolicyService
+(BFB.DataAccess.RetryPolicyService)", shape =rectangle ];
+  "WebApplication" [ label = "WebApplication
+(ASP.NET Core Web Application)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "BankAccountRepository" -> "BankDbContext";
+  "BankBranchRepository" -> "BankMongoDbContext";
+  "WebApplication" -> "BankDbContext";
+  "WebApplication" -> "BankMongoDbContext";
+  "WebApplication" -> "BankDB2Context";
+}

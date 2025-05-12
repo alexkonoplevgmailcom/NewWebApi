@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: bfb-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    # For development, we're not setting up authentication
+    environment:
+      - MONGO_INITDB_DATABASE=BankDB
+
+  db2:
+    image: ibmcom/db2:11.5.7.0
+    container_name: bfb-db2
+    privileged: true
+    ports:
+      - "50000:50000"
+    environment:
+      - LICENSE=accept
+      - DB2INST1_PASSWORD=db2inst1-pwd
+      - DBNAME=BankDB
+      - ARCHIVE_LOGS=false
+      - AUTOCONFIG=false
+    volumes:
+      - db2_data:/database
+    healthcheck:
+      test: ["CMD", "su", "-", "db2inst1", "-c", "db2 connect to BankDB"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  mongodb_data:
+  db2_data:
