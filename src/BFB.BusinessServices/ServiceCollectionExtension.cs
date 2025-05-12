@@ -9,10 +9,7 @@ public static class ServiceCollectionExtension
     {
         // Register business services
         services.AddScoped<IBankAccountService, BankAccountService>();
-        services.AddScoped<ICustomerService, CustomerService>();
-        services.AddScoped<ICustomerAccountService, CustomerAccountService>();
-        services.AddScoped<ITransactionService, TransactionService>();
-
+        
         return services;
     }
 }

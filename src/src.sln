@@ -2,17 +2,13 @@
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFB.Template.Api", "BFB.Template.Api\BFB.Template.Api.csproj", "{394B6B7C-067A-4E2E-10FC-94E5B7E44BD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFB.BankAccountApi", "BFB.BankAccountApi\BFB.BankAccountApi.csproj", "{394B6B7C-067A-4E2E-10FC-94E5B7E44BD3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractions", "Abstractions\Abstractions.csproj", "{30EE12B5-39B0-4434-B9E7-D67489B53275}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFB.DataAccess.MSSQL", "BFB.DataAccess.MSSQL\BFB.DataAccess.MSSQL.csproj", "{D20248D6-72C1-444C-96C5-72D66683BD2A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFB.BusinessServices", "BFB.BusinessServices\BFB.BusinessServices.csproj", "{6E274109-C5C7-42C0-A753-3C27B1DF6D34}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFB.DataAccess.Mongo", "BFB.DataAccess.Mongo\BFB.DataAccess.Mongo.csproj", "{D68FBD0C-F610-46D8-AC1F-D05F0B82D929}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BFB.DataAccess.DB2", "BFB.DataAccess.DB2\BFB.DataAccess.DB2.csproj", "{AEFD27CC-B5E8-4734-ACA1-55364A01475C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,14 +32,6 @@ Global
 		{6E274109-C5C7-42C0-A753-3C27B1DF6D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E274109-C5C7-42C0-A753-3C27B1DF6D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E274109-C5C7-42C0-A753-3C27B1DF6D34}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D68FBD0C-F610-46D8-AC1F-D05F0B82D929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D68FBD0C-F610-46D8-AC1F-D05F0B82D929}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D68FBD0C-F610-46D8-AC1F-D05F0B82D929}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D68FBD0C-F610-46D8-AC1F-D05F0B82D929}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AEFD27CC-B5E8-4734-ACA1-55364A01475C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AEFD27CC-B5E8-4734-ACA1-55364A01475C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AEFD27CC-B5E8-4734-ACA1-55364A01475C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AEFD27CC-B5E8-4734-ACA1-55364A01475C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

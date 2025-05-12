@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankAccounts API Test Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #0066cc;
+        }
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0066cc;
+        }
+        .summary {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .summary-item {
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .passed {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .failed {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .total {
+            background-color: #e2e3e5;
+            color: #383d41;
+        }
+        .success-rate {
+            background-color: #cce5ff;
+            color: #004085;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        thead {
+            background-color: #f8f9fa;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .test-passed {
+            color: #155724;
+            font-weight: bold;
+        }
+        .test-failed {
+            color: #721c24;
+            font-weight: bold;
+        }
+        .details-btn {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .details-container {
+            display: none;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            white-space: pre-wrap;
+            font-family: monospace;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+        .badge-get {
+            background-color: #61affe;
+        }
+        .badge-post {
+            background-color: #49cc90;
+        }
+        .badge-put {
+            background-color: #fca130;
+        }
+        .badge-delete {
+            background-color: #f93e3e;
+        }
+        .badge-200, .badge-201, .badge-204 {
+            background-color: #49cc90;
+        }
+        .badge-400, .badge-404 {
+            background-color: #f93e3e;
+        }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>BankAccounts API Test Report</h1>
+        <p>This report contains the results of automated tests executed against the BankAccounts API endpoints.</p>
+        <p><strong>Report Generated:</strong> 2025-05-12 11:27:33</p>
+        <p><strong>API URL:</strong> http://localhost:5053</p>
+    </div>
+
+    <div class="summary">
+        <div class="summary-item total">
+            <h3>Total Tests</h3>
+            <p>8</p>
+        </div>
+        <div class="summary-item passed">
+            <h3>Passed</h3>
+            <p>8</p>
+        </div>
+        <div class="summary-item failed">
+            <h3>Failed</h3>
+            <p>0</p>
+        </div>
+        <div class="summary-item success-rate">
+            <h3>Success Rate</h3>
+            <p>100%</p>
+        </div>
+    </div>
+
+    <h2>Test Results</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Test</th>
+                <th>Endpoint</th>
+                <th>Method</th>
+                <th>Status</th>
+                <th>Duration (ms)</th>
+                <th>Time</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>            <tr>
+                <td class="test-passed">Get All Bank Accounts</td>
+                <td>/api/BankAccounts</td>
+                <td><span class="badge badge-get">Get</span></td>
+                <td><span class="badge badge-200">200</span></td>
+                <td>13.69</td>
+                <td>11:27:33</td>
+                <td>
+                    <button class="details-btn" onclick="toggleDetails('details-1')">View</button>
+                    <div id="details-1" class="details-container">
+                        <strong>Description:</strong> Retrieves all bank accounts from the system
+                        <hr>
+                        <strong>Response:</strong>
+                        [{"id":1,"accountNumber":"ACC-001","ownerName":"John Doe","balance":5000.0,"type":0,"createdDate":"2025-05-12T06:56:13.794595Z","isActive":true,"bankId":1,"branchId":1},{"id":2,"accountNumber":"ACC-002","ownerName":"Jane Smith-Brown","balance":20000.0,"type":1,"createdDate":"2025-05-12T06:56:13.875889Z","isActive":true,"bankId":1,"branchId":2},{"id":3,"accountNumber":"TEST-001","ownerName":"Test User 1","balance":1000.0,"type":0,"createdDate":"2025-05-12T06:56:13.912934Z","isActive":true,"bankId":1,"branchId":1},{"id":4,"accountNumber":"TEST-002","ownerName":"Test User 2","balance":5000.0,"type":1,"createdDate":"2025-05-12T06:56:13.920986Z","isActive":true,"bankId":1,"branchId":1},{"id":7,"accountNumber":"REPORT-001","ownerName":"Report Test User","balance":2500.0,"type":2,"createdDate":"2025-05-12T08:23:26.020892Z","isActive":true,"bankId":1,"branchId":1}]
+                    </div>
+                </td>
+            </tr>            <tr>
+                <td class="test-passed">Get Account By ID</td>
+                <td>/api/BankAccounts/1</td>
+                <td><span class="badge badge-get">Get</span></td>
+                <td><span class="badge badge-200">200</span></td>
+                <td>3.47</td>
+                <td>11:27:33</td>
+                <td>
+                    <button class="details-btn" onclick="toggleDetails('details-2')">View</button>
+                    <div id="details-2" class="details-container">
+                        <strong>Description:</strong> Retrieves a specific bank account by ID
+                        <hr>
+                        <strong>Response:</strong>
+                        {"id":1,"accountNumber":"ACC-001","ownerName":"John Doe","balance":5000.0,"type":0,"createdDate":"2025-05-12T06:56:13.794595Z","isActive":true,"bankId":1,"branchId":1}
+                    </div>
+                </td>
+            </tr>            <tr>
+                <td class="test-passed">Create New Bank Account</td>
+                <td>/api/BankAccounts</td>
+                <td><span class="badge badge-post">Post</span></td>
+                <td><span class="badge badge-201">201</span></td>
+                <td>5.8</td>
+                <td>11:27:33</td>
+                <td>
+                    <button class="details-btn" onclick="toggleDetails('details-3')">View</button>
+                    <div id="details-3" class="details-container">
+                        <strong>Description:</strong> Creates a new bank account with test data
+                        <hr>
+                        <strong>Response:</strong>
+                        {"id":8,"accountNumber":"REPORT-001","ownerName":"Report Test User","balance":2500.0,"type":2,"createdDate":"2025-05-12T08:27:33.397234Z","isActive":true,"bankId":1,"branchId":1}
+                    </div>
+                </td>
+            </tr>            <tr>
+                <td class="test-passed">Verify Created Account</td>
+                <td>/api/BankAccounts/8</td>
+                <td><span class="badge badge-get">Get</span></td>
+                <td><span class="badge badge-200">200</span></td>
+                <td>3.2</td>
+                <td>11:27:33</td>
+                <td>
+                    <button class="details-btn" onclick="toggleDetails('details-4')">View</button>
+                    <div id="details-4" class="details-container">
+                        <strong>Description:</strong> Verifies the newly created account exists
+                        <hr>
+                        <strong>Response:</strong>
+                        {"id":8,"accountNumber":"REPORT-001","ownerName":"Report Test User","balance":2500.0,"type":2,"createdDate":"2025-05-12T08:27:33.397234Z","isActive":true,"bankId":1,"branchId":1}
+                    </div>
+                </td>
+            </tr>            <tr>
+                <td class="test-passed">Update Bank Account</td>
+                <td>/api/BankAccounts/8</td>
+                <td><span class="badge badge-put">Put</span></td>
+                <td><span class="badge badge-204">204</span></td>
+                <td>30</td>
+                <td>11:27:33</td>
+                <td>
+                    <button class="details-btn" onclick="toggleDetails('details-5')">View</button>
+                    <div id="details-5" class="details-container">
+                        <strong>Description:</strong> Updates an existing bank account
+                        <hr>
+                        <strong>Response:</strong>
+                        Resource updated successfully
+                    </div>
+                </td>
+            </tr>            <tr>
+                <td class="test-passed">Verify Updated Account</td>
+                <td>/api/BankAccounts/8</td>
+                <td><span class="badge badge-get">Get</span></td>
+                <td><span class="badge badge-200">200</span></td>
+                <td>2.29</td>
+                <td>11:27:33</td>
+                <td>
+                    <button class="details-btn" onclick="toggleDetails('details-6')">View</button>
+                    <div id="details-6" class="details-container">
+                        <strong>Description:</strong> Verifies the updated account information
+                        <hr>
+                        <strong>Response:</strong>
+                        {"id":8,"accountNumber":"REPORT-001","ownerName":"Updated Report User","balance":3500.0,"type":2,"createdDate":"2025-05-12T08:27:33.397234Z","isActive":true,"bankId":1,"branchId":1}
+                    </div>
+                </td>
+            </tr>            <tr>
+                <td class="test-passed">Delete Bank Account</td>
+                <td>/api/BankAccounts/8</td>
+                <td><span class="badge badge-delete">Delete</span></td>
+                <td><span class="badge badge-204">204</span></td>
+                <td>2.63</td>
+                <td>11:27:33</td>
+                <td>
+                    <button class="details-btn" onclick="toggleDetails('details-7')">View</button>
+                    <div id="details-7" class="details-container">
+                        <strong>Description:</strong> Deletes the test bank account
+                        <hr>
+                        <strong>Response:</strong>
+                        Resource deleted successfully
+                    </div>
+                </td>
+            </tr>            <tr>
+                <td class="test-passed">Verify Account Deletion</td>
+                <td>/api/BankAccounts/8</td>
+                <td><span class="badge badge-get">Get</span></td>
+                <td><span class="badge badge-404">404</span></td>
+                <td>19.22</td>
+                <td>11:27:33</td>
+                <td>
+                    <button class="details-btn" onclick="toggleDetails('details-8')">View</button>
+                    <div id="details-8" class="details-container">
+                        <strong>Description:</strong> Verifies the account was properly deleted
+                        <hr>
+                        <strong>Response:</strong>
+                        Resource not found (Expected)
+                    </div>
+                </td>
+            </tr>        </tbody>
+    </table>
+
+    <footer>
+        <p>Banking Facility Backend (BFB) - API Test Report</p>
+        <p>Generated automatically using PowerShell test scripts</p>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            var detailsContainer = document.getElementById(id);
+            if (detailsContainer.style.display === 'block') {
+                detailsContainer.style.display = 'none';
+            } else {
+                detailsContainer.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

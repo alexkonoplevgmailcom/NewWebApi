@@ -2,7 +2,7 @@ using Abstractions.DTO;
 using Abstractions.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BFB.Template.Api.Controllers;
+namespace BFB.BankAccountApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

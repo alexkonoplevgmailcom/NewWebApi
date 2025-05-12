@@ -4,6 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>BFB.BankAccountApi</RootNamespace>
+    <AssemblyName>BFB.BankAccountApi</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,9 +17,6 @@
     <ProjectReference Include="..\Abstractions\Abstractions.csproj" />
     <ProjectReference Include="..\BFB.BusinessServices\BFB.BusinessServices.csproj" />
     <ProjectReference Include="..\BFB.DataAccess.MSSQL\BFB.DataAccess.MSSQL.csproj" />
-    <ProjectReference Include="..\BFB.DataAccess.DB2\BFB.DataAccess.DB2.csproj" />
-    <ProjectReference Include="..\BFB.DataAccess.Mongo\BFB.DataAccess.Mongo.csproj" />
-    <ProjectReference Include="..\BFB.DataAccess.RestApi\BFB.DataAccess.RestApi.csproj" />
   </ItemGroup>
 
 </Project>
